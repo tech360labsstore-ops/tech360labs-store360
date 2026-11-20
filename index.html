@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Smart everyday tech, useful gadgets, and accessories at Tech360Labs.">
+<title>Tech360Labs — Everyday Tech, Smarter</title>
+<style>
+:root{--ink:#111827;--muted:#64748b;--line:#e5e7eb;--bg:#f7f8fc;--brand:#5b5cf0;--brand2:#171a35;--white:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(1160px,92%);margin:auto}
+.top{background:#101326;color:#e9eaff;text-align:center;padding:9px 12px;font-size:12px;letter-spacing:.04em}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:23px;font-weight:900;letter-spacing:-1px}.logo span{color:var(--brand)}
+.navright{display:flex;align-items:center;gap:18px}.navright a{font-size:14px;color:#475569}.cartbtn,.btn{border:0;border-radius:999px;background:var(--brand);color:#fff;padding:12px 18px;font-weight:750;cursor:pointer}.cartbtn{padding:10px 15px}
+.hero{background:linear-gradient(120deg,#141832,#282d64 65%,#595cf1);color:white;padding:76px 0 70px;overflow:hidden}
+.heroGrid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:30px}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:11px;color:#c8caff;font-weight:800}
+h1{font-size:clamp(42px,6vw,70px);line-height:.99;letter-spacing:-.055em;margin:18px 0}.hero p{color:#d9dcff;line-height:1.7;max-width:530px}
+.hero .btn{background:#fff;color:#171a35;margin-top:12px}.heroArt{min-height:250px;display:grid;place-items:center}.orb{width:min(320px,70vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 28%,#fff 0 3%,#c8ccff 4% 10%,#7378ff 22%,#343a92 58%,#191d4b 72%);box-shadow:0 25px 90px #090d3488;position:relative}
+.orb:before,.orb:after{content:"";position:absolute;border:1px solid #ffffff70;border-radius:50%;inset:13%;transform:rotate(35deg) scaleX(1.4)}.orb:after{transform:rotate(-35deg) scaleX(1.4)}
+.section{padding:58px 0}.sectionHead{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px}.section h2{font-size:30px;letter-spacing:-.04em;margin:0 0 8px}.muted{color:var(--muted);font-size:14px}
+.tools{display:flex;gap:10px;flex-wrap:wrap}.tools input{border:1px solid var(--line);border-radius:999px;padding:11px 16px;min-width:220px;background:white}.tools select{border:1px solid var(--line);border-radius:999px;padding:11px 14px;background:white}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.product{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:.2s}.product:hover{transform:translateY(-3px);box-shadow:0 14px 35px #1c245012}
+.photo{height:190px;display:grid;place-items:center;background:linear-gradient(140deg,#eef0ff,#f8f8ff);font-size:66px}.product:nth-child(2n) .photo{background:linear-gradient(140deg,#e8f7f7,#f6fbff)}.details{padding:17px;display:flex;flex-direction:column;flex:1}.tag{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);font-weight:850}.details h3{font-size:17px;margin:8px 0}.details p{font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 16px;flex:1}.buyrow{display:flex;align-items:center;justify-content:space-between;gap:12px}.price{font-size:20px;font-weight:850}.buyrow button{border:0;background:#171a35;color:white;border-radius:999px;padding:10px 14px;font-size:12px;font-weight:750;cursor:pointer}.buyrow .testbuy{display:inline-block;background:#eef0ff;color:#3436a8;border-radius:999px;padding:10px 12px;font-size:11px;font-weight:800;white-space:nowrap}
+.notice{margin-top:20px;padding:13px 15px;background:#fff8e7;border:1px solid #f4dfaa;border-radius:12px;color:#76551b;font-size:12px;line-height:1.5}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{background:white;border:1px solid var(--line);border-radius:15px;padding:20px}.feature b{display:block;margin:8px 0}.feature span{font-size:13px;color:var(--muted);line-height:1.5}
+footer{background:#101326;color:#dfe2ff;padding:36px 0}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot p{color:#aeb4d9;font-size:12px;max-width:520px;line-height:1.6}
+.overlay{position:fixed;inset:0;background:#0b102b88;z-index:10;display:none;justify-content:flex-end}.overlay.open{display:flex}.drawer{width:min(420px,100%);height:100%;background:#fff;padding:24px;overflow:auto}.drawerHead{display:flex;justify-content:space-between;align-items:center}.x{border:0;background:#f1f2f8;border-radius:50%;width:36px;height:36px;cursor:pointer}.cartline{display:flex;justify-content:space-between;gap:10px;padding:15px 0;border-bottom:1px solid var(--line);font-size:14px}.qty{display:flex;gap:8px;align-items:center}.qty button{border:1px solid var(--line);background:#fff;border-radius:7px;padding:3px 8px;cursor:pointer}.total{display:flex;justify-content:space-between;font-weight:850;font-size:18px;padding:20px 0}.checkout{width:100%}.empty{color:var(--muted);padding:30px 0;text-align:center;font-size:14px}
+@media(max-width:760px){.heroGrid{grid-template-columns:1fr}.heroArt{display:none}.grid{grid-template-columns:repeat(2,1fr)}.sectionHead{align-items:start;flex-direction:column}.features{grid-template-columns:1fr}.navright a{display:none}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.photo{height:170px}.hero{padding:55px 0}.nav{height:64px}}
+</style>
+</head>
+<body>
+<div class="top">SMART FINDS. EVERYDAY VALUE. &nbsp; | &nbsp; WELCOME TO TECH360LABS</div>
+<header><div class="wrap nav"><a class="logo" href="#">tech<span>360labs</span>.</a><div class="navright"><a href="#shop">Shop gadgets</a><a href="#why">Why Tech360Labs</a><button class="cartbtn" onclick="openCart()">Bag <span id="count">0</span></button></div></div></header>
+<main>
+<section class="hero"><div class="wrap heroGrid"><div><div class="eyebrow">Useful tech for everyday life</div><h1>Small upgrades.<br>Big difference.</h1><p>Discover practical gadgets, clever phone accessories, and everyday tech picked to make life a little easier.</p><a class="btn" href="#shop">Explore the collection</a></div><div class="heroArt"><div class="orb"></div></div></div></section>
+<section class="section wrap" id="shop"><div class="sectionHead"><div><div class="eyebrow" style="color:#5b5cf0">The collection</div><h2>Gadgets worth knowing.</h2><div class="muted">A starter collection for your new tech shop.</div></div><div class="tools"><input id="search" placeholder="Search gadgets…" oninput="render()"><select id="category" onchange="render()"><option value="all">All categories</option><option>Audio</option><option>Charging</option><option>Desk & home</option><option>Travel</option></select></div></div><div class="grid" id="products"></div>
+<div class="notice"><b>Store setup note:</b> Sandbox checkout is being tested with the KP-227 earbuds only. The other products are sample placeholders and cannot be added to the bag yet. The earbuds supplier cost, shipping cost, stock, and delivery estimate must be rechecked in CJ before every order. This checkout is TEST mode only and cannot collect real payments.</div>
+</section>
+<section class="section wrap" id="why"><div class="sectionHead"><div><div class="eyebrow" style="color:#5b5cf0">The Tech360Labs standard</div><h2>Tech without the hassle.</h2></div></div><div class="features"><div class="feature">⚡<b>Useful by design</b><span>Practical gadgets chosen for everyday routines—not clutter.</span></div><div class="feature">🔒<b>Secure checkout</b><span>Connect a trusted payment provider before accepting customer orders.</span></div><div class="feature">📦<b>Clear delivery info</b><span>Publish realistic shipping estimates and a clear returns policy before launch.</span></div></div></section>
+</main>
+<footer><div class="wrap foot"><div><div class="logo" style="color:white">tech<span>360labs</span>.</div><p>Everyday tech, thoughtfully picked. Contact: <a href="mailto:tech360labs.store@gmail.com" style="color:#dfe2ff;text-decoration:underline">tech360labs.store@gmail.com</a></p></div><div><a href="privacy.html">Privacy</a> &nbsp; · &nbsp; <a href="shipping.html">Shipping</a> &nbsp; · &nbsp; <a href="returns.html">Returns</a> &nbsp; · &nbsp; <a href="terms.html">Terms</a></div></div></footer>
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeCart()"><aside class="drawer"><div class="drawerHead"><h2>Your bag</h2><button class="x" onclick="closeCart()">✕</button></div><div id="cartItems"></div><div class="total"><span>Subtotal</span><span id="subtotal">$0.00</span></div><button class="btn checkout" onclick="checkout()">Continue to secure checkout</button><p class="muted" style="line-height:1.5">Sandbox test only. Only KP-227 earbuds can be checked out while the other listings are being verified. No real payments will be collected.</p></aside></div>
+<script>
+const products=[
+{id:1,name:"KP-227 Digital Display Wireless Earbuds",category:"Audio",icon:"🎧",desc:"Compact in-ear Bluetooth earbuds with a digital battery display. Supplier-listed estimated US delivery: 3–7 days; confirm the current estimate before each order.",price:24.99},
+{id:2,name:"3-in-1 Charging Stand",category:"Charging",icon:"🔋",desc:"A tidy charging spot for compatible everyday devices.",price:34.99},
+{id:3,name:"Pocket Bluetooth Speaker",category:"Audio",icon:"🔊",desc:"A compact speaker for desks, trips, and weekends.",price:24.99},
+{id:4,name:"LED Desk Light",category:"Desk & home",icon:"💡",desc:"A clean, adjustable light for your workspace.",price:27.99},
+{id:5,name:"Foldable Phone Stand",category:"Travel",icon:"📱",desc:"A compact stand for video calls and hands-free viewing.",price:14.99},
+{id:6,name:"Mini Portable Projector",category:"Desk & home",icon:"📽️",desc:"A small-screen-to-big-screen idea for movie nights.",price:69.99}
+];
+let cart=JSON.parse(localStorage.getItem("tech360labs-cart")||"{}");
+const money=n=>"$"+n.toFixed(2);
+function render(){const q=document.getElementById("search").value.toLowerCase(),cat=document.getElementById("category").value;const list=products.filter(p=>(cat==="all"||p.category===cat)&&(p.name+" "+p.desc).toLowerCase().includes(q));document.getElementById("products").innerHTML=list.map(p=>`<article class="product"><div class="photo">${p.icon}</div><div class="details"><div class="tag">${p.category}</div><h3>${p.name}</h3><p>${p.desc}</p><div class="buyrow"><span class="price">${money(p.price)}</span>${p.id===1?`<button onclick="add(${p.id})">Add to bag</button>`:`<button disabled style="opacity:.45;cursor:not-allowed">Coming soon</button>`}</div></div></article>`).join("")||'<p class="muted">No gadgets found. Try another search.</p>';updateCart()}
+function add(id){cart[id]=(cart[id]||0)+1;save();openCart()}
+function change(id,n){cart[id]=(cart[id]||0)+n;if(cart[id]<=0)delete cart[id];save()}
+function save(){localStorage.setItem("tech360labs-cart",JSON.stringify(cart));updateCart()}
+function updateCart(){let count=Object.values(cart).reduce((a,b)=>a+b,0),sum=0;document.getElementById("count").textContent=count;const rows=Object.entries(cart).map(([id,qty])=>{let p=products.find(x=>x.id==id);sum+=p.price*qty;return `<div class="cartline"><div><b>${p.name}</b><div class="muted">${money(p.price)} each</div><div class="qty"><button onclick="change(${p.id},-1)">−</button>${qty}<button onclick="change(${p.id},1)">+</button></div></div><b>${money(p.price*qty)}</b></div>`}).join("");document.getElementById("cartItems").innerHTML=rows||'<div class="empty">Your bag is empty.</div>';document.getElementById("subtotal").textContent=money(sum)}
+function openCart(){document.getElementById("overlay").classList.add("open")}
+function closeCart(){document.getElementById("overlay").classList.remove("open")}
+async function checkout(){
+  const button=document.querySelector(".checkout");
+  const items=Object.entries(cart).filter(([id,qty])=>Number(qty)>0);
+  if(!items.length){alert("Your bag is empty.");return;}
+  if(items.some(([id])=>Number(id)!==1)){alert("Sandbox testing is currently limited to KP-227 earbuds.");return;}
+  button.disabled=true;button.textContent="Connecting to secure checkout…";
+  try{
+    const response=await fetch("/.netlify/functions/create-checkout",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({items:items.map(([id,quantity])=>({id:Number(id),quantity:Number(quantity)}))})});
+    const data=await response.json();
+    if(!response.ok)throw new Error(data.error||"Checkout could not be started.");
+    if(!data.url)throw new Error("Stripe did not return a checkout address.");
+    window.location.assign(data.url);
+  }catch(error){alert(error.message||"Checkout failed. Please try again.");button.disabled=false;button.textContent="Continue to secure checkout";}
+}
+render();
+</script>
+</body></html>
